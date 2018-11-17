@@ -87,7 +87,7 @@ $(document).ready(function () {
         temperatureData.shift();
       }
 
-      if (obj.Humidity) {
+      if (obj.humidity) {
         humidityData.push(obj.humidity);
       }
       if (humidityData.length > maxLen) {
