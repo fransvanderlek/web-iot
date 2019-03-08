@@ -78,7 +78,7 @@ $(document).ready(function () {
     
     console.log('location : ' + location.href);
     console.log('selectedDeviceId : ' + selectedDeviceId);
-    console.log('message deviceid : ' + obj.deviceId);
+    
     
     try {
       var obj = JSON.parse(message.data);
