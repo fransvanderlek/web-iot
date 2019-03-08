@@ -73,7 +73,7 @@ $(document).ready(function () {
   ws.onmessage = function (message) {
     console.log('receive message' + message.data);
     
-    var url = new URL(location.href));
+    var url = new URL(location.href);
     var selectedDeviceId = url.searchParams.get("device-id");
     
     console.log('location : ' + location.href);
