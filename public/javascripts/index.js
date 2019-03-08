@@ -82,6 +82,8 @@ $(document).ready(function () {
     
     try {
       var obj = JSON.parse(message.data);
+      console.log('message deviceid : ' + obj.deviceId);
+      
       if(!obj.time || !obj.temperature || selectedDeviceId!=obj.deviceId) {
         return;
       }
