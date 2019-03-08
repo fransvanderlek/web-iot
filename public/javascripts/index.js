@@ -73,8 +73,10 @@ $(document).ready(function () {
   ws.onmessage = function (message) {
     console.log('receive message' + message.data);
     
-    var url = new URL(window.location);
+    var url = new URL(location.href);
     var selectedDeviceId = url.searchParams.get("device-id");
+    console.log('selectedDeviceId : ' + selectedDeviceId);
+    console.log('message deviceid : ' + obj.deviceId);
     
     try {
       var obj = JSON.parse(message.data);
