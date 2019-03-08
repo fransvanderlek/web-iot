@@ -75,6 +75,8 @@ $(document).ready(function () {
     
     var url = new URL(location.href);
     var selectedDeviceId = url.searchParams.get("device-id");
+    
+    console.log('location : ' + location.href);
     console.log('selectedDeviceId : ' + selectedDeviceId);
     console.log('message deviceid : ' + obj.deviceId);
     
