@@ -71,8 +71,10 @@ $(document).ready(function () {
     console.log('Successfully connect WebSocket');
   }
   ws.onmessage = function (message) {
-    console.log('receive message zzz' + message.data);
+    console.log('receive message' + message.data);
     
+    var url = new URL(location.href));
+    var selectedDeviceId = url.searchParams.get("device-id");
     
     console.log('location : ' + location.href);
     console.log('selectedDeviceId : ' + selectedDeviceId);
