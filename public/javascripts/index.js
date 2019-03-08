@@ -1,4 +1,11 @@
 $(document).ready(function () {
+      
+    var url = new URL(location.href);
+    var selectedDeviceId = url.searchParams.get("device-id");
+    
+    console.log('location : ' + location.href);
+    console.log('selectedDeviceId : ' + selectedDeviceId);
+  
   var timeData = [],
     temperatureData = [],
     humidityData = [];
@@ -33,7 +40,7 @@ $(document).ready(function () {
   var basicOption = {
     title: {
       display: true,
-      text: 'Temperature & Humidity Real-time Data',
+      text: 'Temperature & Humidity Real-time Data ['+selectedDeviceId+']',
       fontSize: 36
     },
     scales: {
@@ -72,12 +79,7 @@ $(document).ready(function () {
   }
   ws.onmessage = function (message) {
     console.log('receive message' + message.data);
-    
-    var url = new URL(location.href);
-    var selectedDeviceId = url.searchParams.get("device-id");
-    
-    console.log('location : ' + location.href);
-    console.log('selectedDeviceId : ' + selectedDeviceId);
+
     
     
     try {
